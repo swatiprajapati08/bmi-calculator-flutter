@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'reusable_card.dart';
+import 'buttonpage.dart';
 class ResultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,6 +15,8 @@ class ResultPage extends StatelessWidget {
         children: <Widget>[
           Expanded(
             child: Container(
+              padding: EdgeInsets.all(15.0),
+              alignment: Alignment.bottomLeft,
               child: Text('Your Result',
                 style: kTitleTextStyle,
               ),
@@ -42,6 +45,10 @@ class ResultPage extends StatelessWidget {
               ],
             ),) ,
           ),
+          BottomButton(buttonTitle: 'RE_CALCULATE',
+          onTap: (){
+            Navigator.pop(context);
+          },),
         ],
       ),
     );
